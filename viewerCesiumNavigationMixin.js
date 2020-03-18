@@ -33,7 +33,7 @@ function viewerCesiumNavigationMixin(viewer, options) {
     }
   })(viewer))
 
-  defineProperties(viewer, {
+  Object.defineProperties(viewer, {
     cesiumNavigation: {
       configurable: true,
       get: function () {
@@ -61,7 +61,7 @@ var init = function (viewerCesiumWidget, options) {
 
   var cesiumWidget = defined(viewerCesiumWidget.cesiumWidget) ? viewerCesiumWidget.cesiumWidget : viewerCesiumWidget
 
-  defineProperties(cesiumWidget, {
+  Object.defineProperties(cesiumWidget, {
     cesiumNavigation: {
       configurable: true,
       get: function () {
